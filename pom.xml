@@ -47,7 +47,7 @@
 		<dependency>
 			<groupId>net.masterthought</groupId>
 			<artifactId>cucumber-reporting</artifactId>
-			<version>5.7.7</version>
+			<version>5.7.2</version>
 		</dependency>
 	</dependencies>
 	<build>
@@ -55,9 +55,9 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.11.0</version>
 				<configuration>
-					<release>17</release>
+					<source>11</source>
+					<target>11</target>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -80,7 +80,7 @@
 							<goal>generate</goal>
 						</goals>
 						<configuration>
-							<outputDirectory>${project.build.directory}/masterthought-report/</outputDirectory>
+							<outputDirectory>${project.build.directory}/masterthought-report</outputDirectory>
 							<cucumberOutput>${project.build.directory}/json-report/cucumber.json</cucumberOutput>
 						</configuration>
 					</execution>
